@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>The Cocktail List</h1>
+<p th:each="cocktail : ${cocktailList}">
+    <span th:text="${cocktail.name}"></span>
+</p>
+<form th:action="@{cocktails}" method = "get">
+    <input type="text" name ="ingredient" placeholder="Filter by ingredient" th:value="${ingredient}" />
+    <button type="submit">Search</button>
+</form>
+</body>
+</html>

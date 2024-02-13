@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Cocktails</title>
+</head>
+<body>
+<h1>The Cocktail List</h1>
+<p th:each="cocktail : ${cocktailList}">
+    <span th:text="${cocktail.name}"></span>
+</p>
+</body>
+</html>
